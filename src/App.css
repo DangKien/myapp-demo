@@ -32,12 +32,23 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.active {
-  transform: scale(1.15);
-  z-index: 15px;
+.slick-active {
+  transform: scale(1.1);
+  z-index: 15;
+}
+
+.slick-slide {
+  transition: all .2s ease-in-out;
+  width: 420px;
+}
+
+.slick-list {
+  padding: 50px !important;
+  /* max-height: 500px !important; */
 }

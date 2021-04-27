@@ -1,8 +1,8 @@
-import { Container } from "@material-ui/core";
+import { Button, Container } from "@material-ui/core";
 import React from "react";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Slide from "./components/slide";
+import Slide from "./components/slider/slide";
 
 const useStyles = makeStyles({
   title: {
@@ -13,8 +13,16 @@ const useStyles = makeStyles({
     marginBottom: "0.35em",
   },
   header: {},
-  content: {},
+  content: {
+    display: "flex",
+    flexDirection: "column",
+  },
   section: {},
+  button: {
+    margin: "8rem auto 0 !important" as "margin",
+    borderRadius: "9999px !important" as "radius",
+    padding: "10px 25px !important" as "padding",
+  },
 });
 
 function App() {
@@ -39,6 +47,13 @@ function App() {
         </div>
         <div className={classes.content}>
           <Slide />
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.button}
+          >
+            View All Project
+          </Button>
         </div>
       </Container>
     </>
